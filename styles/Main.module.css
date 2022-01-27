@@ -1,9 +1,46 @@
 .mainContent {
   min-width: 70%;
   min-height: 100vh;
-  background: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
+}
+.title {
+  font-family: open sans;
+  font-size: 2rem;
   color: black;
+  margin-bottom: 1rem;
+}
+.input {
+  width: 22rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1.1rem;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
+}
+.button {
+  border-radius: 50px;
+  width: 11rem;
+  border: none;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  background-color: black;
+  color: white;
+  position: relative;
+  left: -5.5rem;
+}
+.small, .small2{
+  margin-top: 1.2rem;
+  margin-bottom:0;
+  text-align: left;
+  position: relative;
+  left: -6.5rem;
+  color: #4D4D4D;
+}
+.small2{
+  position: relative;
+  left: -8rem;
 }

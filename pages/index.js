@@ -1,10 +1,16 @@
 // import { Main } from "next/document";
 import Head from "next/head";
+import { useState } from "react/cjs/react.development";
 import styles from "../styles/Home.module.css";
-import Aside from "./aside-content/Aside";
-import Main from "./main-content/MainContent";
+import Title from "./components/Title";
+import Login from "./Login";
 
 export default function Home() {
+  const [state, setState] = useState(true);
+  const handleLogin = (e) => {
+    console.log(e.target);
+    if (e.target.matches("h1")) setState(false);
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -13,9 +19,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Aside />
-        <Main />
+      <main onClick={handleLogin} className={styles.main}>
+        {state && <Title styles={styles.title} />}
+        {!state && <Login className={styles.main} />}
       </main>
     </div>
   );
