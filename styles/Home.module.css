@@ -14,7 +14,7 @@
 
 .title {
   cursor: pointer;
-  font-family: open sans;
+  font-family: sans-serif;
   font-size: 4rem;
   color: white;
   transition: all 0.5s ease-in-out;
@@ -22,6 +22,8 @@
 .title span {
   color: #F7DF1E;
 }
+.title:target,
+.title:active,
 .title:hover{
   transform: scale(1.1);
   text-decoration:underline;

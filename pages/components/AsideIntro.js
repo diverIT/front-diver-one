@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/Aside.module.css";
-import Title from "../components/Title";
+import Title from "./Title";
 
-const Aside = () => {
+const AsideIntro = () => {
   return (
     <div className={styles.content}>
       <Title styles={styles.title} />
@@ -16,4 +16,4 @@ const Aside = () => {
   );
 };
 
-export default Aside;
+export default AsideIntro;

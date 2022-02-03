@@ -7,8 +7,15 @@
   align-items: center;
   background: white;
 }
+.icon{
+    margin-right: 19px ;
+    width: 14px;
+    /* height: 13px; */
+    line-height: 48px;
+    margin-top: 3px;
+}
 .title {
-  font-family: open sans;
+  font-family: sans-serif;
   font-size: 2rem;
   color: black;
   margin-bottom: 1rem;
@@ -18,7 +25,7 @@
   border: none;
   border-radius: 5px;
   margin-bottom: 1.1rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
 }
 .button {
@@ -30,7 +37,7 @@
   background-color: black;
   color: white;
   position: relative;
-  left: -5.5rem;
+  left: 0;
 }
 .small, .small2{
   margin-top: 1.2rem;
@@ -43,4 +50,10 @@
 .small2{
   position: relative;
   left: -8rem;
+}
+
+/* ! necesita su propio archivo css */
+.buttonLogin {
+  width: 12px;
+  margin-right: 5px;
 }

@@ -1,4 +1,4 @@
-.container-form{
+.containerForm{
     display:flex;
     flex-direction: column;
     width:100%;
@@ -24,7 +24,7 @@
     margin-bottom: 42px;
     max-width: 200px;
 }
-.input-form{
+.inputForm{
     padding: 9px 0px 9px 8px;
     box-shadow: 0px 4px 11px rgb(148 148 148);
     border-radius: 5px;
@@ -32,7 +32,7 @@
     border: 0;
     margin-bottom: 20px;
 }
-.label-form{
+.labelForm{
     justify-content: center;
     font-size: 36px;
     text-align: center;
@@ -40,7 +40,7 @@
     margin-bottom: 16px;
     font-style: normal;
 }
-.remember-password{
+.rememberPassword{
     font-size: 14px;
     color: rgba(77, 77, 77, 1)
 }
