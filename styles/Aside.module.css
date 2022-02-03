@@ -1,10 +1,12 @@
-.content{
+.content {
+  width: 30%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
+  color: white;
 }
 .title {
   margin-top: -2.5rem;
@@ -14,11 +16,53 @@
   color: white;
 }
 .title span {
-  color: #F7DF1E;
+  color: #f7df1e;
 }
-.text{
+.text {
   color: white;
-  padding:0 1.5rem 00;
+  padding: 0 1.5rem 00;
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
+}
+/* styles for aside logeed */
+.contentLogeed {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.box {
+  width: 100%;
+  height: 20%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  border-bottom: 1px solid white;
+}
+.boxNav{
+  width: 100%;
+  min-width: 30vw;
+  padding: .8rem;
+  padding-left: 4rem;
+  /* border: 1px solid white; */
+}
+.boxNav:hover{
+  color: black;
+  background-color: white;
+}
+.boxNavFooter{
+  width: 100%;
+  min-width: 30vw;
+  padding: .8rem;
+  /* margin-top: 7rem; */
+}
+.icon{
+  margin-right: 19px ;
+  width: 14px;
+  /* height: 13px; */
+  line-height: 48px;
+  margin-top: 3px;
 }
