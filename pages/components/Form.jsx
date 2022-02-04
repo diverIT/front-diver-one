@@ -18,6 +18,7 @@ export default function Form() {
       router.push("/aside-logeed");
     }
   }
+  console.log('clickea algo')
   function handleChange(e) {
     setData({
       ...data,
