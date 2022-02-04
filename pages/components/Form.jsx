@@ -11,6 +11,7 @@ const initialState = {
 export default function Form() {
   const [data, setData] = useState(initialState);
   const router = useRouter();
+  
   function sendData(e) {
     e.preventDefault();
     setData({ user: "", password: "" });
@@ -44,7 +45,12 @@ export default function Form() {
           onChange={handleChange}
           value={data.password}
         />
-        <Button />
+        <Button
+          message="Iniciar Seccion"
+          background="black"
+          width="5rem"
+          color="white"
+        />
         <span>
           <Link href="/">Olvide Mi Contraseña</Link>
         </span>

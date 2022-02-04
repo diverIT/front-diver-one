@@ -24,7 +24,7 @@
   text-align: center;
   font-size: 0.9rem;
 }
-/* styles for aside logeed */
+/* ! styles for aside logeed */
 .contentLogeed {
   width: 30%;
   height: 100vh;
@@ -51,7 +51,7 @@
 }
 .boxNav:hover{
   color: black;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%,0.5);
 }
 .boxNavFooter{
   width: 100%;

@@ -52,6 +52,7 @@ export default function Aside() {
             <Link href={"/tasks"}>Tareas</Link>
           </div>
         </section>
+        {/* fixme please!!! */}
         <section className={styles.boxNavFooter}>
           <div className={styles.boxNav}>
             <Button

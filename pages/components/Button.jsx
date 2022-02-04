@@ -1,12 +1,12 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import styles from "../../styles/Main.module.css";
-function Button({ message, background, width }) {
+function Button({ message, background, width, color }) {
   return (
     <>
       <button>
         <span className="icon">
-        <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faUser} />
         </span>
         {message}
       </button>
@@ -18,16 +18,16 @@ function Button({ message, background, width }) {
           border-radius: 20px;
           border: none;
           padding: 0.9rem;
-          color: black;
+          color: ${color};
           left: 0;
-          font-size: .8rem;
+          font-size: 0.8rem;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
         }
         .icon {
           display: inline-block;
           width: 14px;
-          color: black;
+          color: ${color};
           margin-right: 5px;
         }
       `}</style>
