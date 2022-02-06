@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import styles from "../../styles/Form.module.css";
+import styles from "../styles/Form.module.css";
 import Button from "./Button";
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 export default function Form() {
   const [data, setData] = useState(initialState);
   const router = useRouter();
-  
+
   function sendData(e) {
     e.preventDefault();
     setData({ user: "", password: "" });
@@ -19,7 +19,7 @@ export default function Form() {
       router.push("/aside-logeed");
     }
   }
-  console.log('clickea algo')
+  console.log("clickea algo");
   function handleChange(e) {
     setData({
       ...data,

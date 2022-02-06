@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Aside.module.css";
+import styles from "../styles/Aside.module.css";
 import Title from "./Title";
 
 const AsideIntro = () => {

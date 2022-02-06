@@ -8,8 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import Button from "../../components/Button";
 import styles from "../../styles/Aside.module.css";
-import Button from "../components/Button";
 
 export default function Aside() {
   // const location = useLocation().pathname;
