@@ -49,7 +49,7 @@ export default function Form() {
         <Button
           message="Iniciar Seccion"
           background="black"
-          width="5rem"
+          width="10rem"
           color="white"
         />
         <span>

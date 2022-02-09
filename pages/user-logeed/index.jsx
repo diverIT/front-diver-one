@@ -59,7 +59,7 @@ export default function Aside() {
               <Button
                 message="Iniciar Proyecto"
                 background="yellow"
-                width="80%"
+                width="12rem"
               />
             </div>
             <div className={styles.thouma2}>

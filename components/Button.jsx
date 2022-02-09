@@ -12,7 +12,6 @@ function Button({ message, background, width, color }) {
       </button>
       <style jsx>{`
         button {
-          width: 100%;
           max-width: ${width};
           height: 3rem;
           background-color: ${background};
