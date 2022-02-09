@@ -8,8 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import Button from "../../components/Button";
 import styles from "../../styles/Aside.module.css";
+import Button from "./../../components/Button";
 
 export default function Aside() {
   // const location = useLocation().pathname;
@@ -54,13 +54,17 @@ export default function Aside() {
         </section>
         {/* fixme please!!! */}
         <section className={styles.boxNavFooter}>
-          <div className={styles.boxNav}>
-            <Button
-              message="Iniciar Proyecto"
-              background="yellow"
-              width="40%"
-            />
-            <Link href="/">Cerrar Sesion</Link>
+          <div className={styles.thouma}>
+            <div className={styles.thouma1}>
+              <Button
+                message="Iniciar Proyecto"
+                background="yellow"
+                width="80%"
+              />
+            </div>
+            <div className={styles.thouma2}>
+              <Link href="/">Cerrar Sesion</Link>
+            </div>
           </div>
           <div className={styles.boxNav}>
             <FontAwesomeIcon icon={faCogs} className={styles.icon} />

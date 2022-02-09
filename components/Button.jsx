@@ -8,21 +8,22 @@ function Button({ message, background, width, color }) {
         <span className="icon">
           <FontAwesomeIcon icon={faUser} />
         </span>
-        {message}
+        <span>{message}</span>
       </button>
       <style jsx>{`
         button {
-          min-width: ${width};
+          width: 100%;
+          max-width: ${width};
           height: 3rem;
           background-color: ${background};
           border-radius: 20px;
           border: none;
           padding: 0.9rem;
           color: ${color};
-          left: 0;
           font-size: 0.8rem;
           display: flex;
           justify-content: center;
+          cursor: pointer;
         }
         .icon {
           display: inline-block;

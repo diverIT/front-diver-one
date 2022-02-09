@@ -16,7 +16,7 @@ export default function Form() {
     e.preventDefault();
     setData({ user: "", password: "" });
     if (data.user) {
-      router.push("/aside-logeed");
+      router.push("/user-logeed");
     }
   }
   console.log("clickea algo");
