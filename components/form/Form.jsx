@@ -7,6 +7,7 @@ import Button from "../button/Button";
 const initialState = {
   user: "",
   password: "",
+
 };
 export default function Form() {
   const [data, setData] = useState(initialState);
@@ -15,6 +16,7 @@ export default function Form() {
   function sendData(e) {
     e.preventDefault();
     setData({ user: "", password: "" });
+    router.push("/userLogged")
   }
   function handleChange(e) {
     setData({
