@@ -1,12 +1,10 @@
 import React from 'react'
 import Aside from '../../components/asidePrincipal/Aside'
 
-function Perfil() {
+export default function Teams() {
   return (
     <>
-       <Aside/>
+        <Aside/>
     </>
   )
 }
-
-export default Perfil

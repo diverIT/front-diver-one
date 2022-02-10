@@ -1,7 +1,7 @@
 // import { Main } from "next/document";
 import Head from "next/head";
 import Link from "next/link";
-import Title from "../components/Title";
+import Title from "../components/title/Title";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {

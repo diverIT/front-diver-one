@@ -1,6 +1,6 @@
 import React from "react";
-import AsideIntro from "../../components/AsideIntro";
-import MainIntro from "../../components/MainIntro";
+import AsideIntro from "../../components/asideIntro/AsideIntro";
+import MainIntro from "../../components/mainIntro/MainIntro";
 import style from "../../styles/Login.module.css";
 
 const Login = () => {

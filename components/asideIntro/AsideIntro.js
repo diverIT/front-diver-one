@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../styles/Aside.module.css";
-import Title from "./Title";
+import styles from "../../styles/Aside.module.css";
+import Title from "../title/Title";
 
 const AsideIntro = () => {
   return (

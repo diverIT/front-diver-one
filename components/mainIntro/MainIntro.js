@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../styles/Main.module.css";
-import Form from "./Form";
+import styles from "../../styles/Main.module.css";
+import Form from "../form/Form";
 
 const MainIntro = () => {
   return (
