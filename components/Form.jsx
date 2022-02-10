@@ -47,7 +47,7 @@ export default function Form() {
           value={data.password}
         />
         <Button
-          message="Iniciar Seccion"
+          message="Iniciar Session"
           background="black"
           width="10rem"
           color="white"
