@@ -16,7 +16,7 @@ const RequestApi =  () => {
 
 export const Login = async (path, body) => {
     const res = await (RequestApi()).get(path, JSON.stringify(body))
-    localStorage.getItem('token',JSON.stringify(res.data.token))
+    localStorage.setItem('token',res.data.token)
     return res
 }
 /////////////
