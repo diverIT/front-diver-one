@@ -3,34 +3,42 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.css";
 import Button from "../button/Button";
-
+import validate from "../middlewares/validationMiddleware";
 const initialState = {
-  user: "",
+  email: "",
   password: "",
-
 };
+
 export default function Form() {
   const [data, setData] = useState(initialState);
+  const [error, guardarError] = useState("");  
   const router = useRouter();
 
-  function sendData(e) {
-    e.preventDefault();
-    setData({ user: "", password: "" });
-    router.push("/userLogged")
+  const sendData = async (e) => {
+    e.preventDefault();    
+    const recibiendo = await validate(data);
+    if(typeof recibiendo == 'string'){
+      guardarError(recibiendo);
+    }else{
+      setData({ user: "", password: "" })
+      router.push("/userLogged")
+    }
+    console.log(error);    
   }
   function handleChange(e) {
     setData({
       ...data,
-      [e.target.name]: [e.target.value],
+      [e.target.name]: e.target.value,
     });
   }
   return (
     <>
       <form onSubmit={sendData} className={styles.form}>
         <label className={styles.labelForm}>Login</label>
+        {error ?<p className={styles.errorForm}>{error}</p>:null}
         <input
           type="text"
-          name="user"
+          name="email"
           className={styles.inputForm}
           placeholder="Usuario"
           onChange={handleChange}
