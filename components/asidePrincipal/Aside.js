@@ -13,8 +13,6 @@ import Button from "../button/Button";
 
 export default function Aside() {
     // const location = useLocation().pathname;
-
-
     return (
         <>
             <aside className={styles.contentLogeed}>
