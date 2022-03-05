@@ -15,7 +15,19 @@ const RequestApi = async () => {
 
 }
 
-const GET =  async (path) => {
+export const GET =  async (path) => {
     const res = await( await RequestApi()).get(path)
+    return res
+}
+export const POST =  async (path, body) => {
+    const res = await( await RequestApi()).get(path,JSON.stringify(body))
+    return res
+}
+export const PUT =  async (path,id,body) => {
+    const res = await( await RequestApi()).get(`${path}/${id}`,JSON.stringify(body))
+    return res
+}
+export const DELETE =  async (path,id,body) => {
+    const res = await( await RequestApi()).get(`${path}/${id}`,JSON.stringify(body))
     return res
 }
