@@ -1,17 +1,14 @@
 import { object } from "yup";
 import { userSchema } from "../Validation/loginValidation";
 
-const validate = async (data) =>{
-  try{
-    await userSchema.validate({
-      email: data.email,
-      password: data.password
-    });
-    
-    return true;
-    
+// Aca intentamos validar los formularios
+const validate = async (data) =>{  
+  
+  try{    
+    await userSchema.validate(data, {abortEarly: false}); 
+    return true;    
   }catch(error){ 
-    const mensaje = error.message;     
+    const mensaje = error.errors;        
     return mensaje;   
   }
 }

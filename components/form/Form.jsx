@@ -14,17 +14,20 @@ export default function Form() {
   const [error, guardarError] = useState("");  
   const router = useRouter();
 
-  const sendData = async (e) => {
-    e.preventDefault();    
+  
+  const sendData = async (e) => {    
+    e.preventDefault();   
+     
     const recibiendo = await validate(data);
-    if(typeof recibiendo == 'string'){
-      guardarError(recibiendo);
-    }else{
+
+    if(typeof recibiendo === 'boolean'){
       setData({ user: "", password: "" })
-      router.push("/userLogged")
-    }
-    console.log(error);    
+      router.push("/userLogged");      
+    }else{
+      guardarError(recibiendo);
+    }      
   }
+
   function handleChange(e) {
     setData({
       ...data,
@@ -34,24 +37,27 @@ export default function Form() {
   return (
     <>
       <form onSubmit={sendData} className={styles.form}>
-        <label className={styles.labelForm}>Login</label>
-        {error ?<p className={styles.errorForm}>{error}</p>:null}
+        <label className={styles.labelForm}>Login</label>        
         <input
           type="text"
           name="email"
+          id="email"
           className={styles.inputForm}
           placeholder="Usuario"
           onChange={handleChange}
           value={data.user}
         />
+        {error ?<p className={styles.errorForm}>{error[0]}</p>:null}
         <input
           type="password"
           name="password"
+          id="password"
           className={styles.inputForm}
           placeholder="Contraseña"
           onChange={handleChange}
           value={data.password}
         />
+        {error ?<p className={styles.errorForm}>{error[1]}</p>:null}
         <Button
           message="Iniciar Session"
           background="black"
