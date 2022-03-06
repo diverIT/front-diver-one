@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import Aside from '../../components/asidePrincipal/Aside'
+import React from 'react'
 
-export class FinishedProjects extends Component {
-  render() {
-    return (
-        <>
-          <Aside/>
-        </>
-    )
-  }
+function FinishedProjects() {
+
+  return (
+    <>
+      hola
+    </>
+  )
 }
+
 
 export default FinishedProjects

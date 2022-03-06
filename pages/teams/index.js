@@ -1,12 +1,12 @@
 import React from 'react'
-import Aside from '../../components/asidePrincipal/Aside'
+
 
 export default function Teams() {
 
-  
+
   return (
-    <>
-        <Aside/>
-    </>
+    <div>
+      <h1>teams</h1>
+    </div>
   )
 }

@@ -16,7 +16,7 @@ export default function Form() {
   function sendData(e) {
     e.preventDefault();
     setData({ user: "", password: "" });
-    router.push("/userLogged")
+    router.push("/home/userLogged")
   }
   function handleChange(e) {
     setData({

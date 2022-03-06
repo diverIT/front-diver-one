@@ -1,12 +1,13 @@
 .mainContent {
-  min-width: 70%;
-  min-height: 100vh;
+  width: 70%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: white;
 }
+
 .icon{
     margin-right: 19px ;
     width: 14px;
@@ -57,4 +58,13 @@
 .buttonLogin {
   width: 12px;
   margin-right: 5px;
+}
+.mainContainer {
+  display: flex;
+  height: 100vh;
+}
+.contentWrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
 }

@@ -1,26 +1,14 @@
-import React, { useEffect } from 'react'
-import Aside from '../../components/asidePrincipal/Aside'
-import Services from '../../services/Services'
+import React from 'react'
 
-export default function userLogged(){
-  let body = {
-      password: "1234567"
-  }
 
-  useEffect(() => {
-    async function getData(){
-      const res = await Services.logoutAll()
-      console.log(res)
-    }
-    getData()
-  
-  }, [])
+export default function UserLogged(){
+
   
 
   return (
-    <>
-      <Aside />
-    </>
+    <div>
+        <h1>userlogged</h1>
+    </div>
   )
 
 }
