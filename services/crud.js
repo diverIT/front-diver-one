@@ -1,39 +1,49 @@
 import axios from 'axios'
 
-const RequestApi =  () => {
+const RequestApi = () => {
     const token = localStorage.getItem('token')
     return axios.create({
-        baseURL : process.env["API_URL"],
+        baseURL: "http://localhost:5000",
         headers: token ? {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            } : {
-                'Content-Type': 'application/json',
-            },
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        } : {
+            'Content-Type': 'application/json',
+        },
     })
 }
 ///////////Login
 
 export const Login = async (path, body) => {
-    const res = await (RequestApi()).get(path, JSON.stringify(body))
-    localStorage.setItem('token',res.data.token)
-    return res
-}
-/////////////
+    try {
+        const res = await (RequestApi()).post(path, JSON.stringify(body))
+        localStorage.setItem('token', res.data.token)
+        return res
+    } catch (error) {
+        console.log(error);
+    }
 
-export const GET =  async (path) => {
-    const res = await ( RequestApi()).get(path)
+}
+/////////////logout
+export const Logout = async (path) => {
+    const res = await (RequestApi()).post(path)
     return res
 }
-export const POST =  async (path, body="") => {
-    const res = await(  RequestApi()).get(path,JSON.stringify(body))
+/////////
+
+export const GET = async (path) => {
+    const res = await (RequestApi()).get(path)
     return res
 }
-export const PUT =  async (path,id,body) => {
-    const res = await(  RequestApi()).get(`${path}/${id}`,JSON.stringify(body))
+export const POST = async (path, body = "") => {
+    const res = await (RequestApi()).post(path, JSON.stringify(body))
     return res
 }
-export const DELETE =  async (path,id,body) => {
-    const res = await(  RequestApi()).get(`${path}/${id}`,JSON.stringify(body))
+export const PUT = async (path, id, body) => {
+    const res = await (RequestApi()).put(`/${path}/${id}`, JSON.stringify(body))
+    return res
+}
+export const DELETE = async (path, id, body) => {
+    const res = await (RequestApi()).delete(`/${path}/${id}`, JSON.stringify(body))
     return res
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GET, POST } from './crud';
+import { GET, Login, Logout, POST } from './crud';
 
 const path = "/users/me"
 
@@ -9,16 +9,16 @@ export const Services = {
         return POST("/users", body)
     },
     login: (body) => {
-        return POST("/users/login",body)
+        return Login("/users/login",body)
     },
     getUserProfile : () => {
         return GET(path)
     },
     logout : () => {
-        return POST(`${path}/logout`)
+        return Logout(`${path}/logout`)
     },
     logoutAll : () => {
-        return POST(`${path}/logoutall`)
+        return Logout(`${path}/logoutall`)
     },
     changePass : (body) => {
         return POST(`${path}/changepass`,body)
