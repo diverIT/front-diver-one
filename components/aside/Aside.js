@@ -11,9 +11,10 @@ import Link from "next/link";
 import styles from "../../styles/Aside.module.css";
 import Button from "../../components/button/Button";
 
+
 export default function Aside() {
-    // const location = useLocation().pathname;
     return (
+
         <>
             <aside className={styles.contentLogeed}>
                 <section className={styles.box}>
@@ -81,5 +82,6 @@ export default function Aside() {
                 </section>
             </aside>
         </>
+
     );
 }
