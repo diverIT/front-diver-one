@@ -6,13 +6,22 @@ import {
     faUser,
     faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import styles from "../../styles/Aside.module.css";
 import Button from "../../components/button/Button";
+import Services from "../../services/Services";
+import { useRouter } from "next/router";
 
 
 export default function Aside() {
+    const router = useRouter()
+    async function handleClick(){
+        await Services.logout()
+        router.push('/login')
+        
+    }
     return (
 
         <>
@@ -72,7 +81,7 @@ export default function Aside() {
                             />
                         </div>
                         <div className={styles.thouma2}>
-                            <Link href="/login">Cerrar Sesion</Link>
+                            <button onClick={handleClick} style={buttonClose}>Cerrar Sesion</button>
                         </div>
                     </div>
                     <div className={styles.boxNav}>
@@ -84,4 +93,11 @@ export default function Aside() {
         </>
 
     );
+}
+const buttonClose = {
+    border : 0,
+    cursor: "pointer",
+    backgroundColor: "inherit",
+    color: "white",
+    fontSize : "1rem"
 }

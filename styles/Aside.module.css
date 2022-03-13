@@ -49,6 +49,9 @@
   padding: .8rem;
   padding-left: 4rem;
 }
+.boxNav a {
+  color:white
+}
 .boxNav:hover{
   color: black;
   background-color: hsl(0, 0%, 100%,0.5);

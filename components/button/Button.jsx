@@ -23,6 +23,7 @@ function Button({ message, background, width, color }) {
           display: flex;
           justify-content: center;
           cursor: pointer;
+          margin-Bottom : 10px;
         }
         .icon {
           display: inline-block;

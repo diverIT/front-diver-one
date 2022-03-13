@@ -1,22 +1,27 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styles from "../../styles/Form.module.css";
 import Button from "../button/Button";
 import { useForm } from "react-hook-form";
+import { userSchema } from "../../helpers/validation";
+import { yupResolver } from '@hookform/resolvers/yup'
+import ContextStore from "../../store/Context";
 
 export default function Form() {
+  const { login, setHasError } = useContext(ContextStore)
   const { register, handleSubmit, formState: { errors } } = useForm({
-    defaultValues:{
+    defaultValues: {
       email: "",
       password: ""
     },
-
+    resolver: yupResolver(userSchema)
   });
-  const onSubmit = () => {
-
+  async function onSubmit(data) {
+    setHasError(false)
+    if (!data) return
+    await login(data)
   }
- 
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -28,7 +33,7 @@ export default function Form() {
           placeholder="Usuario"
           {...register("email")}
         />
-        <p>{errors.email?.message}</p>
+        {errors.email?.message}
         <input
           type="password"
           name="password"
@@ -36,7 +41,7 @@ export default function Form() {
           placeholder="Contraseña"
           {...register("password")}
         />
-        
+        {errors.password?.message}
         <Button
           message="Iniciar Session"
           background="black"
@@ -44,7 +49,7 @@ export default function Form() {
           color="white"
         />
         <span>
-          <Link href="/">Olvide Mi Contraseña</Link>
+          <Link href="#/" style={{color:"black"}}>Olvide Mi Contraseña</Link>
         </span>
       </form>
       <style jsx>{`

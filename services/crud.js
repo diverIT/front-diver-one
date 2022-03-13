@@ -3,7 +3,7 @@ import axios from 'axios'
 const RequestApi = () => {
     const token = localStorage.getItem('token')
     return axios.create({
-        baseURL: "http://localhost:5000",
+        baseURL: process.env.NEXT_PUBLIC_URL,
         headers: token ? {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -13,6 +13,7 @@ const RequestApi = () => {
     })
 }
 ///////////Login
+
 
 export const Login = async (path, body) => {
     try {
@@ -27,6 +28,7 @@ export const Login = async (path, body) => {
 /////////////logout
 export const Logout = async (path) => {
     const res = await (RequestApi()).post(path)
+    localStorage.removeItem('token')
     return res
 }
 /////////
