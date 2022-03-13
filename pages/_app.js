@@ -1,12 +1,16 @@
 import '../styles/globals.css'
+import ContextStore from '../store/Context'
 import Layout from '../components/layout'
 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ContextStore.Provider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ContextStore.Provider>
+
   )
 }
 

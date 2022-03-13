@@ -68,11 +68,11 @@
 }
 .thouma{
   height: 40vh;
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  align-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   border-bottom: 1px solid white;
+  padding: 12.8px 12.8px 12.8px 64px;
 }
 .thouma2{
   margin-top: .8rem;
