@@ -3,47 +3,40 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.css";
 import Button from "../button/Button";
+import { useForm } from "react-hook-form";
 
-const initialState = {
-  user: "",
-  password: "",
-
-};
 export default function Form() {
-  const [data, setData] = useState(initialState);
-  const router = useRouter();
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    defaultValues:{
+      email: "",
+      password: ""
+    },
 
-  function sendData(e) {
-    e.preventDefault();
-    setData({ user: "", password: "" });
-    router.push("userLogged")
+  });
+  const onSubmit = () => {
+
   }
-  function handleChange(e) {
-    setData({
-      ...data,
-      [e.target.name]: [e.target.value],
-    });
-  }
+ 
   return (
     <>
-      <form onSubmit={sendData} className={styles.form}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <label className={styles.labelForm}>Login</label>
         <input
           type="text"
           name="user"
           className={styles.inputForm}
           placeholder="Usuario"
-          onChange={handleChange}
-          value={data.user}
+          {...register("email")}
         />
+        <p>{errors.email?.message}</p>
         <input
           type="password"
           name="password"
           className={styles.inputForm}
           placeholder="Contraseña"
-          onChange={handleChange}
-          value={data.password}
+          {...register("password")}
         />
+        
         <Button
           message="Iniciar Session"
           background="black"

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Button({ message, background, width, color }) {
   return (
     <>
-      <button>
+      <button type="submit">
         <span className="icon">
           <FontAwesomeIcon icon={faUser} />
         </span>
