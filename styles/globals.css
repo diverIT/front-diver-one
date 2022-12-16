@@ -9,8 +9,13 @@ body {
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
+
+/* agregando comentario para pr */
